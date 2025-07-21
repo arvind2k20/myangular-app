@@ -1,0 +1,16 @@
+name: Angular Release
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+
+    steps:
+    - uses: actions/checkout@v4
+    - run: docker build . -t developer2k25/angular-sample-app
+    - run: echo "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u $ {{secrets.DOCKER_HUB_USERNAME}}
+    - run: docker push developer2k25/angular-sample-app:latest
