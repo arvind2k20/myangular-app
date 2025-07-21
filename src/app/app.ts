@@ -10,8 +10,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'myangular-app';
- demo = 'abc';
+  title = 'Hello, myangular-app';
+  demo = 'abc';
 
 
 students = ['Ramesh', 'Suresh'];
